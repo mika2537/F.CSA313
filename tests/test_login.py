@@ -20,11 +20,11 @@ class TestLogin:
 
         # Алхам 3: Үр дүн шалгах
         if self.login_page.is_login_successful():
-            assert True, "✅ Амжилттай нэвтэрлээ: 'Оюутны гарын авлага' харагдаж байна."
+            assert True, " Амжилттай нэвтэрлээ: 'Оюутны гарын авлага' харагдаж байна."
         elif self.login_page.is_error_displayed():
-            assert False, "❌ Нэвтрэхэд алдаа гарлаа: Буруу нэр эсвэл нууц үг."
+            assert False, "Нэвтрэхэд алдаа гарлаа: Буруу нэр эсвэл нууц үг."
         else:
-            assert False, "❌ Төлөв тодорхойгүй: Амжилт эсвэл алдаа илэрсэнгүй."
+            assert False, "Төлөв тодорхойгүй: Амжилт эсвэл алдаа илэрсэнгүй."
 
     def teardown_method(self):
         self.driver.quit()
