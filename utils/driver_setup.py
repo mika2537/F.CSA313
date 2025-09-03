@@ -18,7 +18,7 @@ def get_driver():
         # Унших: webdriver-manager-ийн суулгасан зам
         downloaded_path = ChromeDriverManager().install()
 
-        # ⚠️ Чухал: Хэрэв downloaded_path нь файл бол, түүний эцэг директорыг авна
+        # Чухал: Хэрэв downloaded_path нь файл бол, түүний эцэг директорыг авна
         if os.path.isfile(downloaded_path):
             # Жишээ: .../THIRD_PARTY_NOTICES.chromedriver → .../chromedriver-mac-arm64/
             driver_dir = os.path.dirname(downloaded_path)
@@ -34,7 +34,7 @@ def get_driver():
 
         # Зөв эрхтэй эсэхийг шалгах (нэмэлт аюулгүй байдал)
         if not os.access(driver_path, os.X_OK):
-            logging.warning(f"⚠️ Биелэх эрхгүй байна, chmod +x хийж байна: {driver_path}")
+            logging.warning(f" Биелэх эрхгүй байна, chmod +x хийж байна: {driver_path}")
             os.chmod(driver_path, 0o755)
 
         # WebDriver эхлүүлэх
